@@ -4,9 +4,10 @@
 ### 1- Fast PWM mode.
 ### 2- Phase Correct PWM mode.
 ### You will notice that the Fast PWM freq. is double the Phase Correct PWM freq. but the speed of two motors is the same, that because the duty cycle (Average Power) is the same in the two modes.
-### the duty_cycle = Ton / (Ton +Toff) * 100
+### The Fast PWM freq.= Fclk / (N * 256), the Phase Correct PWM freq.= Fclk / (N * 512), N => the prescaler. And that's because the dual-slope operation in phase correct PWM mode.
+#### the duty_cycle = Ton / (Ton +Toff) * 100
 ### duty cycle represented in OCRxA register if you need 50% duty cycle then the OCRxA value will be:
-### OCRxA = duty_cycle * 256 / 100 ==> OCRxA = 50 * 256 / 100 = 128
+#### OCRxA = duty_cycle * 256 / 100 ==> OCRxA = 50 * 256 / 100 = 128
 
 ## Design:
 
