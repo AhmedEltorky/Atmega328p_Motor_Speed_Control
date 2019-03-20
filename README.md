@@ -5,8 +5,8 @@
 ### 2- Phase Correct PWM mode.
 ### You will notice that the Fast PWM freq. is double the Phase Correct PWM freq. but the speed of two motors is the same, that because the duty cycle (Average Power) is the same in the two modes.
 ### the duty_cycle = Ton / (Ton +Toff) * 100
-### duty cycle represented in OCR0A register if you need 50% duty cycle then the OCR0A value will be:
-### OCR0A = duty_cycle * 256 / 100 ==> OCR0A = 50 * 256 / 100 = 128
+### duty cycle represented in OCRxA register if you need 50% duty cycle then the OCRxA value will be:
+### OCRxA = duty_cycle * 256 / 100 ==> OCRxA = 50 * 256 / 100 = 128
 
 ## Design:
 
